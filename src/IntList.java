@@ -8,7 +8,8 @@ public class IntList {
     }
 
     /**
-    return size of the list using recursion
+     * return size of the list using recursion
+     * @return size of list
      */
     public int size(){
         if(rest == null){
@@ -18,7 +19,8 @@ public class IntList {
     }
 
     /**
-     return size of the list no recursion
+     * return size of the list no recursion
+     * @return size of list
      */
     public int iterativeSize(){
         IntList p = this;
@@ -29,6 +31,18 @@ public class IntList {
             p = p.rest;
         }
         return count;
+    }
+
+    /**
+     * return ith item
+     * @param i
+     * @return ith item
+     */
+    public int get(int i){
+        if(i == 0){
+            return this.first;
+        }
+        return this.rest.get(i-1);
     }
 
     public static void main(String[] args) {
